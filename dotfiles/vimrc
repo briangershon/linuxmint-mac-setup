@@ -1,0 +1,5 @@
+colo evening
+let &t_Co=256
+set nocompatible
+syntax enable
+filetype plugin indent on
