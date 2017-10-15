@@ -36,3 +36,15 @@ if [ ! -f ~/.tmux.conf ]; then
   ln -s ~/linuxmint-mac-setup/dotfiles/tmux.conf ~/.tmux.conf
   echo ".tmux.conf linked"
 fi
+
+if [ ! -f /usr/local/go/bin/go ]; then
+  cd ~/Downloads
+  wget https://storage.googleapis.com/golang/go1.9.1.linux-amd64.tar.gz
+  sudo tar -C /usr/local -xzf go1.9.1.linux-amd64.tar.gz
+  echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
+fi
+
+if [ ! -f /usr/bin/node ]; then
+  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+fi
