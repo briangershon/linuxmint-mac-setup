@@ -37,3 +37,13 @@ Generate SSH Key
 
     # add key to Github.
 
+Configure Touchpad
+
+The Mac Laptop touchpad didn't work well by default on a MacBookPro 2011.
+
+I used the settings from this article (http://yarenty.blogspot.com/2014/08/how-to-fix-macbook-pro-touchpad-on.html) but kept the synaptics driver which seems to work a bit better.
+
+    sudo mkdir /etc/X11/xorg.conf.d
+    sudo cp conf/50-synaptics.conf /etc/X11/xorg.conf.d
+
+    # restart system
