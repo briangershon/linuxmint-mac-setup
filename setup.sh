@@ -26,13 +26,11 @@ if [ ! -f /usr/bin/atom ]; then
 fi
 
 if [ ! -f ~/.vimrc ]; then
-  rm ~/.vimrc
   ln -s ~/linuxmint-mac-setup/dotfiles/vimrc ~/.vimrc
   echo ".vimrc linked"
 fi
 
 if [ ! -f ~/.tmux.conf ]; then
-  rm ~/.tmux.conf
   ln -s ~/linuxmint-mac-setup/dotfiles/tmux.conf ~/.tmux.conf
   echo ".tmux.conf linked"
 fi
